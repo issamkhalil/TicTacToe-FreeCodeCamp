@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link href="http://allfont.net/allfont.css?fonts=lipstick-traces" rel="stylesheet" type="text/css"/>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="mainContainer" class="container-fluid">
+    <div class="row">
+
+
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 box col-xs-12">
+            <div class="row score">
+                <div id="role-comp" class=" col-xs-5 aleft">
+                    computer <i class="fa fa-circle-o"></i>
+                </div>
+                <div class="col-xs-2 text-center"><span id="score" class="badge">6-2</span></div>
+                <div id="role-you" class="col-xs-5 aright active">
+                    You <i class="fa fa-close"></i>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div class="row game" style="position:relative;">
+                <div id="win-image" class="col-lg-6 col-xs-12 col-md-9 col-md-offset-1 col-lg-offset-3">
+                    <svg id="win-svg" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	            viewBox="-100 -100 200 200" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+
+                    </svg>
+                </div>
+
+                <div id="column1" style="border-width:0px 1px 1px 0px;"
+                     class="col-lg-2 col-xs-4 col-md-3 col-md-offset-1 col-lg-offset-3 column">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 200 200"
+                         style="pointer-events: none; display: block;"></svg>
+                </div>
+
+                <div id="column2" style="border-width:0px 1px 1px 1px;" class="col-lg-2 col-xs-4  col-md-3 column">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 200 200"
+                         style="pointer-events: none; display: block;"></svg>
+                </div>
+                <div id="column3" style="border-width:0px 0px 0px 1px;" class="col-lg-2 col-xs-4 col-md-3 column">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 200 200"
+                         style="pointer-events: none; display: block;"></svg>
+                </div>
+            </div>
+            <div class="row game">
+                <div id="column4" style="border-width:1px 1px 1px 0px;"
+                     class="col-lg-2 col-md-3 col-md-offset-1 col-xs-4 col-lg-offset-3 column">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 200 200"
+                         style="pointer-events: none; display: block;"></svg>
+                </div>
+                <div id="column5" style="border-width:1px 1px 1px 1px;" class="col-lg-2 col-xs-4 col-md-3 column">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 200 200"
+                         style="pointer-events: none; display: block;"></svg>
+                </div>
+                <div id="column6" style="border-width:1px 0px 1px 1px;" class="col-lg-2 col-xs-4  col-md-3 column">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 200 200"
+                         style="pointer-events: none; display: block;"></svg>
+                </div>
+            </div>
+            <div class="row game">
+                <div id="column7" style="border-width:1px 1px 0px 0px;"
+                     class="col-lg-2 col-md-3 col-md-offset-1 col-xs-4 col-lg-offset-3 column">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 200 200"
+                         style="pointer-events: none; display: block;"></svg>
+                </div>
+                <div id="column8" style="border-width:1px 1px 0px 1px;" class="col-lg-2 col-xs-4 col-md-3 column">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 200 200"
+                         style="pointer-events: none; display: block;"></svg>
+                </div>
+                <div id="column9" style="border-width:1px 0px 0px 1px;" class="col-lg-2 col-xs-4 col-md-3 column">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 200 200"
+                         style="pointer-events: none; display: block;"></svg>
+                </div>
+            </div>
+            <div class="row social">
+                <div class="col-lg-1 col-lg-offset-4  col-md-1 col-md-offset-4 col-xs-2 col-xs-offset-3">
+                    <a href="https://www.facebook.com/issam.khalil.777">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0 {
+        fill: none;
+    }
+
+    .st1 {
+        fill: url(#New_Pattern_4);
+    }
+</style>
+<pattern  y="24" width="3.7" height="5.2" patternUnits="userSpaceOnUse" id="New_Pattern_4" viewBox="0 -5.2 3.7 5.2" style="overflow:visible;">
+	<g>
+		<rect y="-5.2" class="st0" width="3.7" height="5.2"/>
+		
+			<image style="overflow:visible;" width="5" height="7" xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAYABgAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA
+EAMCAwYAAAFyAAABfwAAAab/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX
+Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa
+JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAAgABQMBIgACEQEDEQH/
+xABnAAEBAAAAAAAAAAAAAAAAAAAABQEBAAAAAAAAAAAAAAAAAAAAABAAAgMAAAAAAAAAAAAAAAAA
+AAEDBBQRAAICAwAAAAAAAAAAAAAAABECAAExQgMSAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhED
+EQAAAKgP/9oACAECAAEFAD//2gAIAQMAAQUAP//aAAgBAQABBQByXdH/2gAIAQICBj8Af//aAAgB
+AwIGPwB//9oACAEBAQY/AFsdAGbYYWf/2Q==" transform="matrix(0.7491 0 0 -0.7493 0 0)">
+		</image>
+	</g>
+</pattern>
+<g id="post-facebook">
+	<path class="st1" d="M20,2H4C2.9,2,2,2.9,2,4v16c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V4C22,2.9,21.1,2,20,2z M19,4v3h-2
+		c-0.6,0-1,0.4-1,1v2h3v3h-3v7h-3v-7h-2v-3h2V7.5C13,5.6,14.6,4,16.5,4H19z"/>
+</g>
+</svg>
+                    </a>
+                </div>
+                <div class="col-lg-1 col-md-1 col-xs-2">
+                    <a href="https://github.com/issamkhalil">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+<style type="text/css">
+	.st0 {
+        fill: none;
+    }
+
+    .st1 {
+        fill: url(#New_Pattern_2);
+    }
+</style>
+<pattern  y="128" width="26.1" height="31.4" patternUnits="userSpaceOnUse" id="New_Pattern_2" viewBox="0 -31.4 26.1 31.4" style="overflow:visible;">
+	<g>
+		<rect y="-31.4" class="st0" width="26.1" height="31.4"/>
+
+			<image style="overflow:visible;" width="5" height="7" xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEASABIAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA
+EAMCAwYAAAFyAAABfwAAAab/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX
+Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa
+JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAAcABQMBIgACEQEDEQH/
+xABnAAEBAAAAAAAAAAAAAAAAAAAABAEBAAAAAAAAAAAAAAAAAAAAABAAAgMAAAAAAAAAAAAAAAAA
+AAECAxQRAAICAwAAAAAAAAAAAAAAAAERMQIAIaESAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhED
+EQAAALwf/9oACAECAAEFAD//2gAIAQMAAQUAP//aAAgBAQABBQBys0//2gAIAQICBj8Af//aAAgB
+AwIGPwB//9oACAEBAQY/AK6LVjBlV7n/2Q==" transform="matrix(5.2057 -1.232111e-002 -1.059645e-002 -4.4773 7.417517e-002 0)">
+		</image>
+	</g>
+</pattern>
+<g>
+	<path class="st1" d="M64,5.1c-33.3,0-60.4,27-60.4,60.4c0,26.7,17.3,49.3,41.3,57.3c3,0.6,4.1-1.3,4.1-2.9c0-1.4-0.1-6.2-0.1-11.2
+		c-16.8,3.7-20.3-7.1-20.3-7.1c-2.7-7-6.7-8.8-6.7-8.8c-5.5-3.7,0.4-3.7,0.4-3.7c6.1,0.4,9.3,6.2,9.3,6.2c5.4,9.2,14.1,6.6,17.6,5
+		c0.5-3.9,2.1-6.6,3.8-8.1c-13.4-1.5-27.5-6.7-27.5-29.8c0-6.6,2.4-12,6.2-16.2c-0.6-1.5-2.7-7.7,0.6-16c0,0,5.1-1.6,16.6,6.2
+		c4.8-1.3,10-2,15.1-2c5.1,0,10.3,0.7,15.1,2c11.5-7.8,16.6-6.2,16.6-6.2c3.3,8.3,1.2,14.5,0.6,16c3.9,4.2,6.2,9.6,6.2,16.2
+		c0,23.2-14.1,28.3-27.6,29.8c2.2,1.9,4.1,5.6,4.1,11.2c0,8.1-0.1,14.6-0.1,16.6c0,1.6,1.1,3.5,4.1,2.9c24-8,41.3-30.6,41.3-57.3
+		C124.4,32.1,97.3,5.1,64,5.1L64,5.1z"/>
+	<path class="st1" d="M26.5,91.8c-0.1,0.3-0.6,0.4-1,0.2c-0.4-0.2-0.7-0.6-0.5-0.9c0.1-0.3,0.6-0.4,1-0.2
+		C26.4,91.1,26.6,91.5,26.5,91.8L26.5,91.8z M28.9,94.5c-0.3,0.3-0.9,0.1-1.2-0.3c-0.4-0.4-0.5-1-0.2-1.3c0.3-0.3,0.8-0.1,1.2,0.3
+		C29.2,93.7,29.2,94.3,28.9,94.5L28.9,94.5z M31.3,98c-0.4,0.3-1,0-1.4-0.5c-0.4-0.5-0.4-1.2,0-1.4c0.4-0.3,1,0,1.4,0.5
+		C31.7,97.1,31.7,97.7,31.3,98L31.3,98z M34.6,101.4c-0.3,0.4-1,0.3-1.6-0.2c-0.5-0.5-0.7-1.2-0.3-1.5c0.3-0.4,1-0.3,1.6,0.2
+		C34.8,100.3,34.9,101,34.6,101.4L34.6,101.4z M39.1,103.3c-0.1,0.5-0.8,0.7-1.5,0.5c-0.7-0.2-1.1-0.8-1-1.2
+		c0.1-0.5,0.8-0.7,1.5-0.5C38.8,102.3,39.2,102.8,39.1,103.3z M44,103.7c0,0.5-0.6,0.9-1.3,0.9c-0.7,0-1.3-0.4-1.3-0.9
+		c0-0.5,0.6-0.9,1.3-0.9C43.4,102.8,44,103.2,44,103.7L44,103.7z M48.6,102.9c0.1,0.5-0.4,1-1.1,1.1c-0.7,0.1-1.3-0.2-1.4-0.7
+		c-0.1-0.5,0.4-1,1.1-1.1C47.9,102.1,48.5,102.4,48.6,102.9L48.6,102.9z"/>
+</g>
+</svg>
+                    </a>
+                </div>
+                <div class="col-lg-1 col-md-1 col-xs-2">
+                    <a href="https://plus.google.com/u/0/101613425035516136016">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0 {
+        fill: none;
+    }
+
+    .st1 {
+        fill: url(#New_Pattern_2);
+    }
+</style>
+<pattern  y="24" width="26.1" height="31.4" patternUnits="userSpaceOnUse" id="New_Pattern_2" viewBox="0 -31.4 26.1 31.4" style="overflow:visible;">
+	<g>
+		<rect y="-31.4" class="st0" width="26.1" height="31.4"/>
+
+			<image style="overflow:visible;" width="5" height="7" xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEASABIAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA
+EAMCAwYAAAFyAAABfwAAAab/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX
+Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa
+JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAAcABQMBIgACEQEDEQH/
+xABnAAEBAAAAAAAAAAAAAAAAAAAABAEBAAAAAAAAAAAAAAAAAAAAABAAAgMAAAAAAAAAAAAAAAAA
+AAECAxQRAAICAwAAAAAAAAAAAAAAAAERMQIAIaESAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhED
+EQAAALwf/9oACAECAAEFAD//2gAIAQMAAQUAP//aAAgBAQABBQBys0//2gAIAQICBj8Af//aAAgB
+AwIGPwB//9oACAEBAQY/AK6LVjBlV7n/2Q==" transform="matrix(5.2057 -1.232111e-002 -1.059645e-002 -4.4773 7.417517e-002 0)">
+		</image>
+	</g>
+</pattern>
+<g id="google-plus">
+	<path class="st1" d="M21,10V7h-2v3h-3v2h3v3h2v-3h3v-2H21z M13.3,13.4l-1.1-0.8c-0.4-0.3-0.8-0.7-0.8-1.4s0.5-1.3,1-1.6
+		c1.3-1,2.6-2.1,2.6-4.3c0-2.1-1.3-3.3-2-3.9h1.7L15.9,0H9.7C5.3,0,3.1,2.8,3.1,5.8c0,2.3,1.8,4.8,5,4.8h0.8
+		c-0.1,0.3-0.4,0.8-0.4,1.3c0,1,0.4,1.4,0.9,2c-1.4,0.1-4,0.4-5.9,1.6c-1.8,1.1-2.3,2.6-2.3,3.7c0,2.3,2.1,4.5,6.6,4.5
+		c5.4,0,8-3,8-5.9C15.8,15.7,14.7,14.6,13.3,13.4z M5.7,4.3c0-2.2,1.3-3.2,2.7-3.2c2.6,0,4,3.5,4,5.5c0,2.6-2.1,3.1-2.9,3.1
+		C7,9.7,5.7,6.6,5.7,4.3z M9.3,22.3c-3.3,0-5.4-1.5-5.4-3.7s2-2.9,2.6-3.2c1.3-0.4,3-0.5,3.3-0.5s0.5,0,0.7,0c2.4,1.7,3.4,2.4,3.4,4
+		C13.9,20.8,12,22.3,9.3,22.3z"/>
+</g>
+</svg>
+
+                    </a>
+                    <div class="col-lg-1 col-md-2 col-xs-3">
+                        <a href="http://linkedin.com">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0 {
+        fill: none;
+    }
+
+    .st1 {
+        fill: url(#New_Pattern_2);
+    }
+</style>
+<pattern  y="24" width="17.9" height="15.7" patternUnits="userSpaceOnUse" id="New_Pattern_2" viewBox="0 -15.7 17.9 15.7" style="overflow:visible;">
+	<g>
+		<rect y="-15.7" class="st0" width="17.9" height="15.7"/>
+
+			<image style="overflow:visible;" width="5" height="7" xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEASABIAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA
+EAMCAwYAAAFyAAABfwAAAab/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX
+Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa
+JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAAcABQMBIgACEQEDEQH/
+xABnAAEBAAAAAAAAAAAAAAAAAAAABAEBAAAAAAAAAAAAAAAAAAAAABAAAgMAAAAAAAAAAAAAAAAA
+AAECAxQRAAICAwAAAAAAAAAAAAAAAAERMQIAIaESAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhED
+EQAAALwf/9oACAECAAEFAD//2gAIAQMAAQUAP//aAAgBAQABBQBys0//2gAIAQICBj8Af//aAAgB
+AwIGPwB//9oACAEBAQY/AK6LVjBlV7n/2Q==" transform="matrix(3.5727 -8.456185e-003 -5.285974e-003 -2.2336 3.700182e-002 0)">
+		</image>
+	</g>
+</pattern>
+<g id="post-linkedin">
+	<path class="st1" d="M20,2H4C2.9,2,2,2.9,2,4v16c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V4C22,2.9,21.1,2,20,2z M8,19H5v-9h3V19z
+		 M6.5,8.3c-1,0-1.8-0.8-1.8-1.8s0.8-1.8,1.8-1.8s1.8,0.8,1.8,1.8S7.5,8.3,6.5,8.3z M19,19h-3v-5.3c0-0.8-0.7-1.5-1.5-1.5
+		S13,12.9,13,13.7V19h-3v-9h3v1.2c0.5-0.8,1.6-1.4,2.5-1.4c1.9,0,3.5,1.6,3.5,3.5V19z"/>
+</g>
+</svg>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="modal" id="choisModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+         data-backdrop="static"
+         data-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title text-center" id="myModalLabel">
+                        Sabora  TicTacToe (<i class="fa fa-circle-o"></i> Or  <i class="fa fa-remove"></i> )
+                    </h4>
+                </div>
+                <div class="modal-body">
+                        <div class="row">
+                            <div class="col-xs-4 col-xs-offset-4">
+
+                            <div id="chois-coix" class="col-xs-5 col-xs-offset-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 200 200"
+                                     style="pointer-events: none; display: block;"></svg>
+                            </div>
+
+                            <div id="chois-circle" class="col-xs-5 col-xs-offset-1">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 200 200"
+                                     style="pointer-events: none; display: block;"></svg>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="result-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+         data-backdrop="static"
+         data-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title text-center" id="result-text">
+                        Choise your icon
+                    </h4>
+                </div>
+                <div class="modal-body">
+                        <div class="row">
+                            <div class="col-xs-4 col-xs-offset-4">
+                                <button class="btn btn-success" id="replay-btn">
+                                    <i class="fa fa-reply"></i>
+                                </button>
+
+                            </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="row">
+        <div class="col-lg-12">
+            <p class="author text-center">Created By <a href="mailto:issam.khalil11@gmail.com">KHALIL Issam </a></p>
+        </div>
+    </footer>
+</div>
+</div>
+
+<script src="jquery.js"></script>
+<script src="bootstrap.min.js"></script>
+<script>
+
+    function Circle(idSvg, user) {
+        this.idCol = idSvg;
+        var svg = document.querySelector("#" + idSvg + " svg");
+        this.name = "circle";
+        this.user = user;
+        function createLine() {
+            var l = document.createElementNS("http://www.w3.org/2000/svg", "line");
+            l.setAttribute("x1", "50");
+            l.setAttribute("x2", "45");
+            l.setAttribute("y1", "50");
+            l.setAttribute("y2", "45");
+            l.setAttribute("fill", "#ffffff");
+            l.setAttribute("stroke", "#ffffff");
+            l.setAttribute("stroke-width", "20");
+            svg.appendChild(l);
+            return l;
+        }
+
+        var currnetPos = 0;
+
+        function desiner() {
+            if (currnetPos > 360) {
+                clearInterval(int);
+                return;
+            }
+            var line = createLine();
+            currnetPos += 2;
+            line.setAttribute("transform", " rotate(" + currnetPos + ")");
+        }
+
+        var int = setInterval(desiner, 1);
+
+    }
+
+    function Croix(idSvg, user) {
+        this.idCol = idSvg;
+        var svg = document.querySelector("#" + idSvg + " svg");
+        this.name = "croix";
+        this.user = user;
+        function createLine() {
+            var l = document.createElementNS("http://www.w3.org/2000/svg", "line");
+            l.setAttribute("x1", "50");
+            l.setAttribute("x2", "50");
+            l.setAttribute("y1", "50");
+            l.setAttribute("y2", "50");
+            l.setAttribute("fill", "#ffffff");
+
+            l.setAttribute("stroke", "#ffffff");
+            l.setAttribute("stroke-width", "15");
+            svg.appendChild(l);
+            return l;
+        }
+
+        var currentline = createLine();
+        var end = false;
+
+        function desiner() {
+            var currentPos = parseInt(currentline.getAttribute("y2"));
+            if (currentPos == -100) {
+                if (end) {
+                    clearInterval(int);
+                } else {
+                    currentline = createLine();
+                    currentline.setAttribute("transform", " translate(-50) rotate(90)");
+                    end = true;
+                }
+            } else {
+                currentPos -= 2;
+                currentline.setAttribute("y2", currentPos);
+                currentline.setAttribute("x2", currentPos);
+            }
+        }
+
+        var int = setInterval(desiner, 1);
+    }
+
+
+    var celes = [[null, null, null], [null, null, null], [null, null, null]];
+    var score = {you: 0, computer: 0};
+    var computerIcon="";
+    var yourIcon="";
+
+    var roleComp = false;
+
+    function posAtack(table, user) {
+        try {
+            if (table[0].user === user && table[1].user === user && table[2] === null)
+                return 2;
+        } catch (er) {
+
+        }
+        try {
+            if (table[0].user === user && table[2].user === user && table[1] === null)
+                return 1;
+        } catch (er) {
+
+        }
+        try {
+            if (table[2].user === user && table[1].user === user && table[0] === null)
+                return 0;
+        } catch (er) {
+
+        }
+        return false;
+    }
+
+    function getPosAtack(user) {
+        var table = celes[0];
+        var res = posAtack(table, user);
+        if (res) {
+            return [0, res];
+        }
+        table = celes[1];
+        res = posAtack(table, user);
+        if (res) {
+            return [1, res];
+        }
+        table = celes[2];
+        res = posAtack(table, user);
+        if (res) {
+            return [2, res];
+        }
+
+        table = [celes[0][0], celes[1][0], celes[2][0]];
+        res = posAtack(table, user);
+        if (res) {
+            return [res, 0];
+        }
+        table = [celes[0][1], celes[1][1], celes[2][1]];
+        res = posAtack(table, user);
+        if (res) {
+            return [res, 1];
+        }
+        table = [celes[0][2], celes[1][2], celes[2][2]];
+        res = posAtack(table, user);
+        if (res) {
+            return [res, 2];
+        }
+        table = [celes[0][0], celes[1][1], celes[2][2]];
+        res = posAtack(table, user);
+        if (res) {
+            return [res, res];
+        }
+        table = [celes[0][2], celes[1][1], celes[2][0]];
+        res = posAtack(table, user);
+        if (res!==false) {
+            if (res == 0)
+                return [0, 2];
+            if (res == 1)
+                return [1, 1];
+            if (res == 2)
+                return [2, 0];
+        }
+
+        return false;
+    }
+
+    function getPosDef() {
+        return getPosAtack(false);
+    }
+
+
+    function getPosition() {
+        var position = getPosAtack(true);
+        if (position) {
+            return position;
+        } else {
+            position = getPosDef();
+            if (position) {
+                return position;
+            } else {
+                //TODO: random position
+                for (var i = 0; i < celes.length; i++) {
+                    for (var j = 0; j < celes.length; j++) {
+                        if (celes[i][j] === null) {
+                            return [i, j];
+                        }
+                    }
+                }
+                return false;
+            }
+
+        }
+    }
+
+    function reInit() {
+        celes = [[null, null, null], [null, null, null], [null, null, null]];
+        roleComp = false;
+        updateUI();
+        document.getElementById("win-svg").innerHTML = "";
+        $('.column').each(function () {
+            this.querySelector("svg").innerHTML = "";
+        });
+    }
+
+    function compPlay() {
+        var p = getPosition();
+        if (p) {
+            var pos = p[0] * 3 + p[1] + 1;
+            var idSvg = "column" + pos;
+            celes[p[0]][p[1]] = new window[computerIcon](idSvg, true);
+            var winValue = isWin(true);
+            if (winValue) {
+                console.log(winValue);
+                var winSvg =
+                        '<line x1="' + winValue[0] + '" x2="' + winValue[0] + '" y1="' + winValue[2] + '" y2="' + winValue[2] + '" stroke-width="8" fill="#ddd" stroke="#ddd"  >' +
+                        '<animate attributeName="x2" to="' + winValue[1] + '" dur="2s" fill="freeze"></animate>' +
+                        '<animate attributeName="y2" to="' + winValue[3] + '" dur="2s" fill="freeze"></animate>' +
+                        '</line>'
+                document.getElementById("win-svg").innerHTML = winSvg;
+                setTimeout(function(){
+                    $("#result-modal").modal();
+                    $("#result-text").text("Computer Wins");
+                },200);
+
+                score.computer++;
+            } else {
+                roleComp = false;
+                updateUI();
+            }
+        } else {
+            setTimeout(function(){
+                $("#result-modal").modal();
+                $("#result-text").text("end end end");
+            },200);
+
+        }
+    }
+
+    function isWin(user) {
+        try {
+            if (celes[0][0].user === user && celes[0][1].user === user && celes[0][2].user === user) {
+                return [-150, 150, -70, -70];
+            }
+        } catch (err) {
+        }
+        try {
+            if (celes[1][0].user === user && celes[1][1].user === user && celes[1][2].user === user) {
+                return [-150, 150, 0, 0];
+            }
+        } catch (err) {
+        }
+        try {
+            if (celes[2][0].user === user && celes[2][1].user === user && celes[2][2].user === user) {
+                return [-150, 150, 70, 70];
+            }
+        } catch (err) {
+        }
+        try {
+            if (celes[0][0].user === user && celes[1][0].user === user && celes[2][0].user === user) {
+                return [-80, 80, -90, 90];
+            }
+        } catch (err) {
+        }
+        try {
+            if (celes[0][1].user === user && celes[1][1].user === user && celes[2][1].user === user) {
+                return [0, 0, -90, 90];
+            }
+        } catch (err) {
+        }
+        try {
+            if (celes[0][2].user === user && celes[1][2].user === user && celes[2][2].user === user) {
+                return [80, 80, -90, 90];
+            }
+        } catch (err) {
+        }
+        try {
+            if (celes[0][0].user === user && celes[1][1].user === user && celes[2][2].user === user) {
+                return [-150, 150, -100, 100];
+            }
+        } catch (err) {
+        }
+        try {
+            if (celes[0][2].user === user && celes[1][1].user === user && celes[2][0].user === user) {
+                return [150, -150, -100, 100];
+            }
+        } catch (err) {
+        }
+
+        return false;
+    }
+
+    function updateUI() {
+        if (roleComp) {
+            $('#role-comp').addClass('active');
+            $('#role-you').removeClass('active');
+        } else {
+            $('#role-comp').removeClass('active');
+            $('#role-you').addClass('active');
+        }
+
+        $('#score').text(score.computer + '-' + score.you);
+    }
+
+    $('.column').click(function () {
+        var col = parseInt(this.id.split("column")[1]) - 1;
+        var c1 = parseInt(col / 3);
+        var c2 = col - (3 * c1);
+
+        if (celes[c1][c2] === null) {
+
+            if (!roleComp) {
+                celes[c1][c2] = new window[yourIcon](this.id, false);
+                roleComp = true;
+                var winValue = isWin(false);
+                if (winValue) {
+                    var winSvg =
+                            '<line x1="' + winValue[0] + '" x2="' + winValue[0] + '" y1="' + winValue[2] + '" y2="' + winValue[2] + '" stroke-width="8" fill="#ddd" stroke="#ddd"  >' +
+                            '<animate attributeName="x2" to="' + winValue[1] + '" dur="2s" fill="freeze"></animate>' +
+                            '<animate attributeName="y2" to="' + winValue[3] + '" dur="2s" fill="freeze"></animate>' +
+                            '</line>'
+                    document.getElementById("win-svg").innerHTML = winSvg;
+                    setTimeout(function(){
+                        $("#result-modal").modal();
+                        $("#result-text").text("You Win");
+                    },200);
+                    score.you++;
+                } else {
+                    setTimeout(compPlay, 1000);
+                }
+            } else {
+
+            }
+        }
+        updateUI();
+    });
+
+    updateUI();
+    $("#choisModal").modal();
+
+    new Circle("chois-circle",false);
+    new Croix("chois-coix",false);
+    $("#chois-coix").click(function(){
+        yourIcon="Croix";
+        computerIcon="Circle";
+        $("#choisModal").modal("toggle");
+    });
+    $("#chois-circle").click(function(){
+        yourIcon="Circle";
+        computerIcon="Croix";
+        $("#choisModal").modal("toggle");
+    });
+    $("#replay-btn").click(function(){
+            reInit();
+        $("#result-modal").modal("toggle");
+    });
+</script>
+</body>
+</html>

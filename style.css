@@ -1,0 +1,151 @@
+
+.container-fluid .box{
+    border-width: 5px;
+    border-image-source: url("https://s-media-cache-ak0.pinimg.com/736x/07/d8/f3/07d8f3a88a8347ea6ac35e2029921a74.jpg");
+    background: url("http://www.lapetiteviedeci.com/wordpress/wp-content/uploads/2015/08/fond_tableau_noir-1024x725.jpg");
+    padding: 20px;
+    border-image-slice: 20;
+}
+.container-fluid{
+    height: 100%;
+    padding: 15%;
+    background: url("http://phandroid.s3.amazonaws.com/wp-content/uploads/2015/03/wood-wallpaper-3-640x400.jpg");
+}
+
+.game{
+    height: 80px;
+}
+.column svg{
+    fill:#ddd;
+    stroke: #ddd;
+    height: 80%;
+    width: 80%;
+    margin: auto;
+}
+.column{
+    cursor: url("http://www.rw-designer.com/cursor-view/34233.png"), pointer;
+    background: transparent;
+    border-style: solid;
+    border-image-source: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wAARCAALAAgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3D4ZeKP2dfC/wPtfHFndaU/hu18Kwf2hHpsE8qRxrw0KbZnHC8lQBlhGOSworwz4Valqcv/BKTSLaTVLopc+C9SMq/aH/AOWSuUA5+UAgcLgHAznAooA//9k=');
+    border-image-slice: 1 3;
+    border-image-repeat: repeat;
+    height: 100%;
+    padding-top: 20px;
+}
+html,body{
+    height: 100%;
+}
+footer .author a{
+    font-weight: bold;
+    color: #761c19;
+    font-family: 'Droid Sans', sans-serif;
+    animation: feu 1s linear 1s  infinite;
+}
+@keyframes feu {
+    0%{
+        text-shadow: 0 0 0px #fff203, 0 0 0px #fff203;
+    }
+    100%{
+        text-shadow: 0 0 30px #fff203, 0 0 15px #ff3c0f;
+    }
+}
+footer .author{
+    font-size: 22px;
+    /*color: #2e6da4;*/
+    color: #fff;
+    font-family: 'Lipstick Traces', arial;
+}
+.social {
+    margin-top: 20px;
+}
+.social > div a:hover svg{
+    transform: scale(1.1,1.1);
+}
+.social > div a svg{
+    transition: .5s;
+    padding: 0px!important;
+}
+
+.aleft{
+    text-align: left;
+}
+.aright{
+    text-align: right;
+}
+
+.score{
+    margin-bottom: 20px;
+    /*border-bottom: 1px solid #ccc;*/
+}
+.score div.aright.active:before{
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f061";
+    animation: active .5s linear .5s  infinite;
+}
+.score div.aleft.active:after{
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f060";
+    animation: active .5s linear .5s  infinite;
+}
+
+.score div, .score span{
+    color: #eee;
+}
+
+@keyframes active {
+    0%{
+        color: #eee;
+    }
+    100%{
+    color: #256c11;
+    }
+}
+
+#win-image #win-svg{
+    width: 100%;
+    height: 100%;
+}
+#win-image{
+    position: absolute;
+    height: 300%;
+    display: block;
+    padding: 0px;
+}
+#choisModal,#result-modal{
+    margin-top: 15%;
+    height: 50%;
+}
+#chois-coix:hover svg,#chois-circle:hover svg{
+    transform: scale(1.1,1.1);
+}
+#chois-coix svg{
+    margin-top: 30%;
+}
+
+#chois-coix svg,#chois-circle svg{
+    width: 80%;
+    height: 80%;
+    margin-top: 10%;
+    margin-left: 10%;
+    transition: .8s;
+}
+#chois-coix,#chois-circle{
+    cursor: pointer;
+    background: url("http://www.lapetiteviedeci.com/wordpress/wp-content/uploads/2015/08/fond_tableau_noir-1024x725.jpg");
+}
+.modal-header{
+    background: url("http://www.lapetiteviedeci.com/wordpress/wp-content/uploads/2015/08/fond_tableau_noir-1024x725.jpg");
+    color: #ddd;
+    font-family: 'Lipstick Traces', arial;
+
+}
+.modal-body .btn{
+    width: 100%;
+}
+
+
+
+
+
+
+
